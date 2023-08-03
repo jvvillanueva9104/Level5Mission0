@@ -1,0 +1,41 @@
+.heroImageBotContainer {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.heroBotImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%);
+  opacity: 70%;
+  overflow: hidden;
+}
+
+.heroBotImg:hover {
+  filter: none;
+}
+
+.heroBotText {
+  position: absolute;
+  top: 20rem;
+  left: 14rem;
+  font-size: 60px;
+  text-align: center;
+  /* color: #bebbbb; */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .heroBotImg {
+    object-position: right;
+  }
+
+  .heroBotText {
+    top: 13rem;
+    left: 0;
+  }
+}
