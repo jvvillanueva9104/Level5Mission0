@@ -1,0 +1,194 @@
+.navBar {
+  height: 4rem;
+  width: 100%;
+  /* background: linear-gradient(to bottom right, #fff, #8b8779); */
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sampleLogo {
+  height: 2rem;
+  width: auto;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.navBusName {
+  cursor: pointer;
+}
+
+.rightSide {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navAnchor {
+  text-decoration: none;
+  color: black;
+}
+
+.ctaBtns {
+  background-color: transparent;
+  padding: 5px 20px;
+  border: #8b8779 1px solid;
+  margin-right: 40px;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ctaBtns:hover,
+.navAnchor:hover {
+  transform: translateY(-4px);
+}
+
+.ctaBtns:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.navAnchor:hover {
+  text-decoration: underline;
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobileNav {
+  width: 140px;
+  background-color: rgb(216, 214, 214);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -160px;
+  padding: 16px;
+  transition: transform 0.5s;
+}
+
+.openDrawer {
+  transform: translateX(-160px);
+}
+
+.mobileNav a {
+  text-decoration: none;
+  color: black;
+  margin: 16px 0;
+}
+
+.mobileNav a:hover {
+  text-decoration: underline;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  background-color: black;
+  height: 4px;
+  width: 36px;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .rightSide {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+
+  .navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .ctaBtns {
+    padding: 5px 10px;
+    margin: 0;
+  }
+}
+
+.animateBar1 {
+  animation: flipBar1 1s;
+  animation-fill-mode: forwards;
+}
+
+.animateBar2 {
+  animation: fadeBar2 1s;
+  animation-fill-mode: forwards;
+}
+
+.animateBar3 {
+  animation: flipBar3 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipBar1 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(45deg) translate(4px, 10px);
+  }
+}
+
+@keyframes fadeBar2 {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flipBar3 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-45deg) translate(4px, -10px);
+  }
+}

@@ -1,0 +1,14 @@
+.footer {
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footerSpan {
+  display: inline;
+}

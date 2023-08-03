@@ -1,0 +1,85 @@
+.heroCardsContainer {
+  display: flex;
+  gap: 200px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.cardLinks {
+  text-align: center;
+  text-decoration: none;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cardLinks:hover {
+  text-decoration: underline;
+}
+
+.heroSpan {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}
+
+.heroCardImgs {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  aspect-ratio: 3/2;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.heroCardImgs:hover {
+  filter: none;
+  transition: all 0.6s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .heroCardsContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* .overlay {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.overlay:hover {
+  opacity: 1;
+} */
